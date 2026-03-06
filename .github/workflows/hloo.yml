@@ -1,4 +1,4 @@
-
+---
 name: Hello Praveen
 on:
   push:
@@ -12,12 +12,9 @@ jobs:
         run: echo "hello praveen"
       - name: say hello to username
         run: echo "hello $USER"
-
-1:
+dump:
   runs-on: ubuntu-latest
   steps:
     - name: show what is the version python,docker etc
       run: docker --version && python --version
-  
-        
 
