@@ -1,0 +1,41 @@
+# Name of the workflow
+name: CICD
+
+# Workflow will run manually when triggered
+on:
+  workflow_dispatch:
+
+# Jobs section
+jobs:
+
+  # Job 1: Checkout code
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      # Step to simulate code checkout
+      - name: Checkout code
+        run: echo "Code cloned from GitHub"
+
+  # Job 2: Build Docker container
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Step to simulate docker build
+      - name: Build Docker container
+        run: echo "Docker container build"
+
+  # Job 3: Test container
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      # Step to simulate testing
+      - name: Test the container
+        run: echo "Testing the container"
+
+  # Job 4: Deploy application
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Step to simulate deployment
+      - name: Deploying the app
+        run: echo "Docker compose deployed the app"
