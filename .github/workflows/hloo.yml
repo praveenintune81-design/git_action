@@ -42,7 +42,13 @@ jobs:
       - name: Check Node version
         run: node --version
 
-      - name: Check Apache2 service status
+      - name: Start Apache2
+        run: sudo systemctl start apache2
+
+      - name: Enable Apache2
+        run: sudo systemctl enable apache2
+
+      - name: Check Apache2 status
         run: sudo systemctl status apache2 --no-pager
       
 
