@@ -18,6 +18,37 @@ jobs:
   dump:
     runs-on: ubuntu-latest
     steps:
-      - name: Show versions of Python and Docker
-        run: docker --version && python --version
+      - name: Show versions of Docker and Python
+        run: docker --version && python3 --version
+
+  install_software:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update packages
+        run: sudo apt update
+
+      - name: Install Apache2, Nginx, Git, Node.js
+        run: sudo apt install -y apache2 nginx git nodejs
+
+      - name: Check Apache2 version
+        run: apache2 -v
+
+      - name: Check Nginx version
+        run: nginx -v
+
+      - name: Check Git version
+        run: git --version
+
+      - name: Check Node version
+        run: node --version
+
+      - name: Check Apache2 service status
+        run: sudo systemctl status apache2 --no-pager
+      
+
+
+
+
+
+
 
