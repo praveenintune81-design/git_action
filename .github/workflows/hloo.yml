@@ -1,20 +1,23 @@
----
 name: Hello Praveen
+
 on:
   push:
     branches:
       - main
+
 jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
-      - name: say hello tp users
-        run: echo "hello praveen"
-      - name: say hello to username
-        run: echo "hello $USER"
-dump:
-  runs-on: ubuntu-latest
-  steps:
-    - name: show what is the version python,docker etc
-      run: docker --version && python --version
+      - name: Say hello to users
+        run: echo "Hello Praveen"
+
+      - name: Say hello to username
+        run: echo "Hello $USER"
+
+  dump:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show versions of Python and Docker
+        run: docker --version && python --version
 
